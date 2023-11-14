@@ -23,7 +23,7 @@ RUN apt-get update \
          sudo \
     && rm -rf /var/lib/apt/lists/* \
     && adduser statauser sudo \ 
-    && sed 's+domain="coder" rights="none"+domain="coder" rights="read | write"+' /etc/ImageMagick-6/policy.xml \
+    && sed -i 's+domain="coder" rights="none"+domain="coder" rights="read | write"+' /etc/ImageMagick-6/policy.xml \
     && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
 
