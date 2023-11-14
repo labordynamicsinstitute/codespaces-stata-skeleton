@@ -1,0 +1,27 @@
+{
+    "name": "stata-working",
+    /* "image": "aeadataeditor/stata-project-with-docker:latest", */
+    "dockerFile": "Dockerfile",
+    "context": "..",
+    /*"initializeCommand": ".devcontainer/init.sh",*/
+    "postCreateCommand": ".devcontainer/post.sh",
+    "customizations": {
+        "env": {
+            "DOCKER_BUILDKIT": "1",
+        },
+        "vscode": {
+            "extensions": [
+                "kylebarron.stata-enhanced",
+                "yeaoh.statarun"
+            ],
+            "workbench.colorTheme": "Visual Studio Light",
+            "terminal.integrated.shell.linux": "/bin/bash"
+        }
+    },
+    "secrets": {
+        "STATA_LIC_BASE64": {
+          "description": "Base64 encoded Stata license file, needed to run Stata within this container.",
+          "documentationUrl": "https://github.com/labordynamicsinstitute/codespaces-stata-r-skeleton"
+        }
+      }
+}
