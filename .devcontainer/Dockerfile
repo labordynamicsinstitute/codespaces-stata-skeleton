@@ -18,7 +18,7 @@ RUN apt-get update \
          python3-pip \
          rsync \
          openssh-server openssh-client \
-         python3.8-venv \
+         python3.11-venv \
          imagemagick \
          sudo \
     && rm -rf /var/lib/apt/lists/* \
