@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1.2
-ARG SRCVERSION=17
+ARG SRCVERSION=18
 # update based on https://hub.docker.com/r/dataeditors/stata17/tags
-ARG SRCTAG=2023-01-10
+ARG SRCTAG=2024-04-30
 ARG SRCHUBID=dataeditors
 
 FROM ${SRCHUBID}/stata${SRCVERSION}:${SRCTAG}
