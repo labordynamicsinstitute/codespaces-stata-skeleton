@@ -27,8 +27,7 @@ RUN apt-get update \
     && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
 # Install Latex packages
-
-RUN /usr/local/texlive/bin/linux/tlmgr install eurosym threeparttable adjustbox caption float supertabular
+#RUN /usr/local/texlive/bin/linux/tlmgr install eurosym threeparttable adjustbox caption float supertabular
 
 # install the gh binaries
 RUN \ 
