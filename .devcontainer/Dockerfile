@@ -24,9 +24,11 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/* \
     && adduser statauser sudo \ 
     && sed -i 's+domain="coder" rights="none"+domain="coder" rights="read | write"+' /etc/ImageMagick-6/policy.xml \
-    && tlmgr install eurosym threeparttable \
     && echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
+# Install Latex packages
+
+RUN tlmgr install eurosym threeparttable adjustbox caption float supertabular
 
 # install the gh binaries
 RUN \ 
