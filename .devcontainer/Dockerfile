@@ -28,7 +28,7 @@ RUN apt-get update \
 
 # Install Latex packages
 
-RUN tlmgr install eurosym threeparttable adjustbox caption float supertabular
+RUN /usr/local/texlive/bin/linux/tlmgr install eurosym threeparttable adjustbox caption float supertabular
 
 # install the gh binaries
 RUN \ 
